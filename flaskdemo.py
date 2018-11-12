@@ -13,8 +13,8 @@ example_data = [
 
 #Use "query" variable from the URL. If no variable is given,
 #use empty string instead. GET and POST methods are allowed.
-@app.route("/", defaults={"query": ""}, methods=["GET", "POST"])
-@app.route("/<query>", methods=["GET", "POST"])
+@app.route("/search", defaults={"query": ""}, methods=["GET", "POST"])
+@app.route("/search/<query>", methods=["GET", "POST"])
 def search(query):
 
     if request.method == "POST":
@@ -35,3 +35,5 @@ def search(query):
  
     #Render index.html with matches variable. 
     return render_template("index.html", matches=matches)
+
+app.run(port=5000)
