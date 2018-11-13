@@ -36,4 +36,3 @@ def search(query):
     #Render index.html with matches variable. 
     return render_template("index.html", matches=matches)
 
-app.run(port=5000)

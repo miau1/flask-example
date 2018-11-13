@@ -28,22 +28,38 @@ pip install Flask
 
 Make sure you are in your `myproject` directory.
 
-Clone this git repository:
+Clone the git repository and move to that directory:
 
 ```
 git clone https://github.com/miau1/flask-example
+cd flask-example
+```
+
+Set the following environment variables:
+
+Show flask which file to run:
+
+```
+export FLASK_APP=flaskdemo.py
+```
+
+Enable development environment to activate interactive debugger and reloader:
+
+```
+export FLASK_ENV=development
+```
+
+Set the port in which to run the application, e.g.:
+
+```
+export FLASK_RUN_PORT=8000
 ```
 
 Run the app:
 
 ```
-python3 flaskdemo.py
+flask run
 ```
 
-Go to `localhost:5000/search` in your browser to see the website. To run the app in a different port, change the last line of `flaskdemo.py` before running the app, for example:
+Go to `localhost:8000/search` in your browser to see the website.
 
-```
-app.run(port=8000)
-```
-
-And go to `localhost:8000/search`.
